@@ -1,0 +1,310 @@
+[
+    {
+        "id": "map_01",
+        "name": "Chapter 1: The Ambush",
+        "objective": "Escape (Arrive at East)",
+        "width": 15,
+        "height": 10,
+        "layout": [
+            "WWWWWWWWWWWWWWW",
+            "W...T........EW",
+            "W.S.T...P....EW",
+            "WS.S.........EW",
+            "W.S.T...P.....W",
+            "W.............W",
+            "WTT...WWW...TTW",
+            "W.....W.W.....W",
+            "W.....W.W.....W",
+            "WWWWWWWWWWWWWWW"
+        ],
+        "legend": {
+            ".": "Plain",
+            "W": "Wall",
+            "T": "Tree",
+            "P": "Pillar",
+            "E": "Escape",
+            "S": "Start"
+        },
+        "enemies": [
+            {
+                "id": "E1",
+                "class": "Soldier",
+                "hp": 20,
+                "x": 10,
+                "y": 2
+            },
+            {
+                "id": "E2",
+                "class": "Fighter",
+                "hp": 22,
+                "x": 8,
+                "y": 3
+            },
+            {
+                "id": "E3",
+                "class": "Archer",
+                "hp": 18,
+                "x": 12,
+                "y": 2
+            },
+            {
+                "id": "E4",
+                "class": "Soldier",
+                "hp": 21,
+                "x": 8,
+                "y": 4
+            },
+            {
+                "id": "E5",
+                "class": "Fighter",
+                "hp": 23,
+                "x": 6,
+                "y": 6
+            },
+            {
+                "id": "E6",
+                "class": "Mercenary",
+                "hp": 19,
+                "x": 13,
+                "y": 3,
+                "isBoss": true
+            }
+        ]
+    },
+    {
+        "id": "map_02",
+        "name": "Chapter 2: The Chokepoint",
+        "objective": "Defend Green Tiles (8 Turns)",
+        "width": 12,
+        "height": 14,
+        "layout": [
+            "XXXXXXXXXXXX",
+            "...RBBBBR...",
+            "...RBBBBR...",
+            "...RBBBBR...",
+            "...RBBBBR...",
+            "...RBBBBR...",
+            "...RBBBBR...",
+            "...RBBBBR...",
+            "...R....R...",
+            "..FR....RF..",
+            "...GGGGGG...",
+            "...SSSSSS...",
+            "............",
+            "WWWWWWWWWWWW"
+        ],
+        "legend": {
+            ".": "Plain",
+            "B": "Bridge",
+            "R": "River",
+            "F": "Fort",
+            "G": "Goal",
+            "X": "Spawn",
+            "W": "Wall",
+            "S": "Start"
+        },
+        "enemies": [
+            {
+                "id": "E1",
+                "class": "Cavalier",
+                "hp": 24,
+                "x": 4,
+                "y": 1
+            },
+            {
+                "id": "E2",
+                "class": "Cavalier",
+                "hp": 24,
+                "x": 7,
+                "y": 1
+            },
+            {
+                "id": "E3",
+                "class": "Archer",
+                "hp": 20,
+                "x": 5,
+                "y": 0
+            }
+        ]
+    },
+    {
+        "id": "map_03",
+        "name": "Chapter 3: The Infiltration",
+        "objective": "Defeat Boss (Fog of War)",
+        "width": 15,
+        "height": 14,
+        "layout": [
+            "TTTTTTTTTTTTTTT",
+            "TS..T.....T...T",
+            "T.S.T.?...T.?.T",
+            "TS.ST.........T",
+            "T...TTT...MMM.T",
+            "T.?.......MBM.T",
+            "T...TTT...M.M.T",
+            "T...T.T.......T",
+            "T.V.T.T.?.....T",
+            "T.............T",
+            "TTTTT...TTTTTTT",
+            "......?........",
+            "...............",
+            "WWWWWWWWWWWWWWW"
+        ],
+        "legend": {
+            ".": "Plain",
+            "T": "Forest",
+            "M": "Mountain",
+            "V": "Village",
+            "S": "Start",
+            "?": "Hidden",
+            "B": "Boss",
+            "W": "Wall"
+        },
+        "enemies": [
+            {
+                "id": "E1",
+                "class": "Myrmidon",
+                "hp": 22,
+                "x": 6,
+                "y": 2
+            },
+            {
+                "id": "E2",
+                "class": "Mage",
+                "hp": 20,
+                "x": 12,
+                "y": 2
+            },
+            {
+                "id": "E3",
+                "class": "Archer",
+                "hp": 22,
+                "x": 2,
+                "y": 5
+            },
+            {
+                "id": "Boss",
+                "class": "Assassin",
+                "hp": 30,
+                "x": 11,
+                "y": 5,
+                "isBoss": true
+            }
+        ]
+    },
+    {
+        "id": "map_04",
+        "name": "Chapter 4: The Siege",
+        "objective": "Seize Throne",
+        "width": 18,
+        "height": 10,
+        "layout": [
+            "WWWWWWWWWWWWWWWWWW",
+            "WC..X.W.....WP.X.W",
+            "W.....D..X..D....W",
+            "WWWWWWWWDWWWWWDWWW",
+            "W................W",
+            "W.S.S.WWWWWWW.X..W",
+            "W.....WT...XW....W",
+            "W.S.S.D..B..D..X.W",
+            "W.....W.....W....W",
+            "WWWWWWWWWWWWWWWWWW"
+        ],
+        "legend": {
+            ".": "Floor",
+            "W": "Wall",
+            "D": "Door",
+            "C": "Chest",
+            "T": "Throne",
+            "P": "Prisoner",
+            "S": "Start",
+            "X": "Enemy",
+            "B": "Boss"
+        },
+        "enemies": [
+            {
+                "id": "E1",
+                "class": "Knight",
+                "hp": 32,
+                "x": 4,
+                "y": 1
+            },
+            {
+                "id": "Boss",
+                "class": "General",
+                "hp": 38,
+                "x": 9,
+                "y": 7,
+                "isBoss": true
+            }
+        ]
+    },
+    {
+        "id": "map_05",
+        "name": "Chapter 5: The Decisive Battle",
+        "objective": "Defeat Valerius",
+        "width": 15,
+        "height": 15,
+        "layout": [
+            "P......X......P",
+            "...............",
+            "...............",
+            "...............",
+            "...............",
+            "...............",
+            "......SBS......",
+            "X.....SSS.....X",
+            "...............",
+            "...............",
+            "...............",
+            "...............",
+            "...............",
+            "...............",
+            "P......X......P"
+        ],
+        "legend": {
+            ".": "Floor",
+            "P": "Pylon",
+            "B": "Boss",
+            "S": "Start",
+            "X": "Guardian"
+        },
+        "enemies": [
+            {
+                "id": "TL",
+                "class": "Sage",
+                "hp": 30,
+                "x": 7,
+                "y": 0
+            },
+            {
+                "id": "TR",
+                "class": "Hero",
+                "hp": 35,
+                "x": 14,
+                "y": 0
+            },
+            {
+                "id": "BL",
+                "class": "General",
+                "hp": 40,
+                "x": 0,
+                "y": 14
+            },
+            {
+                "id": "BR",
+                "class": "Sniper",
+                "hp": 32,
+                "x": 14,
+                "y": 14
+            },
+            {
+                "id": "Boss",
+                "class": "Emperor",
+                "hp": 50,
+                "x": 7,
+                "y": 6,
+                "isBoss": true
+            }
+        ]
+    }
+]

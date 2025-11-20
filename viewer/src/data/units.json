@@ -1,0 +1,62 @@
+[
+  {
+    "id": "elara",
+    "name": "Elara",
+    "class": "Blade Lord",
+    "role": "Evasion Tank / Leader",
+    "description": "The exiled princess and tactician of the group.",
+    "stats": {
+      "hp": 18, "str": 6, "mag": 2, "skl": 9, "spd": 10, "lck": 8, "def": 4, "res": 3, "mov": 5
+    },
+    "growths": {
+      "hp": 60, "str": 45, "mag": 20, "skl": 60, "spd": 65, "lck": 50, "def": 30, "res": 35
+    },
+    "items": ["Rapier", "Vulnerary"],
+    "skills": ["Vanguard", "Duelist"]
+  },
+  {
+    "id": "kaelen",
+    "name": "Kaelen",
+    "class": "General",
+    "role": "Physical Wall",
+    "description": "Elara's sworn protector. A man of few words and immense durability.",
+    "stats": {
+      "hp": 24, "str": 10, "mag": 0, "skl": 6, "spd": 3, "lck": 4, "def": 11, "res": 1, "mov": 4
+    },
+    "growths": {
+      "hp": 85, "str": 55, "mag": 5, "skl": 40, "spd": 25, "lck": 30, "def": 60, "res": 15
+    },
+    "items": ["Steel Lance", "Javelin"],
+    "skills": ["Immovable", "Shove"]
+  },
+  {
+    "id": "lyra",
+    "name": "Lyra",
+    "class": "Sage",
+    "role": "Magic Nuke / Healer",
+    "description": "A prodigy from the academy who joined the guard for adventure.",
+    "stats": {
+      "hp": 16, "str": 1, "mag": 8, "skl": 7, "spd": 8, "lck": 6, "def": 2, "res": 7, "mov": 5
+    },
+    "growths": {
+      "hp": 45, "str": 10, "mag": 70, "skl": 50, "spd": 55, "lck": 45, "def": 15, "res": 50
+    },
+    "items": ["Thunder", "Heal"],
+    "skills": ["Arcane Flux", "Focus"]
+  },
+  {
+    "id": "thorne",
+    "name": "Thorne",
+    "class": "Sniper",
+    "role": "Sniper",
+    "description": "A cynical veteran scout who knows the terrain better than anyone.",
+    "stats": {
+      "hp": 20, "str": 8, "mag": 1, "skl": 11, "spd": 7, "lck": 5, "def": 5, "res": 2, "mov": 5
+    },
+    "growths": {
+      "hp": 70, "str": 50, "mag": 15, "skl": 65, "spd": 45, "lck": 35, "def": 30, "res": 20
+    },
+    "items": ["Iron Bow", "Longbow"],
+    "skills": ["Eagle Eye", "Point-Blank"]
+  }
+]

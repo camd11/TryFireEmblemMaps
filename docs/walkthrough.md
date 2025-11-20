@@ -38,3 +38,21 @@
 
 ## Conclusion
 This campaign offers a tight, escalating difficulty curve that forces the player to master the specific strengths and weaknesses of their small team. No unit is filler; everyone is essential to victory.
+
+## Verification
+The web viewer has been successfully implemented and verified.
+
+### Visual Overhaul Gallery
+````carousel
+![Map 1: Ambush](assets/initial_map_view_1763666001925.png)
+<!-- slide -->
+![Map 2: Chokepoint](assets/map2_fixed_view_1763667542013.png)
+<!-- slide -->
+![Map 3: Infiltration](assets/map3_fixed_view_1763668409738.png)
+<!-- slide -->
+![Map 4: Siege](assets/map4_load_attempt_1763668715227.png)
+<!-- slide -->
+![Map 5: Decisive Battle](assets/map5_view_1763666046816.png)
+<!-- slide -->
+![Unit Selection](assets/unit_selected_view_1763666004876.png)
+````

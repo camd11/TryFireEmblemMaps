@@ -1,0 +1,289 @@
+:root {
+  --bg-dark: #0f172a;
+  --bg-panel: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow: hidden;
+  /* Prevent full page scroll */
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: var(--bg-panel);
+  padding: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.map-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.map-selector h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.map-selector button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.map-selector button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.map-selector button.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.instructions {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: radial-gradient(circle at center, #1e293b 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.map-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 10;
+}
+
+.map-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.objective {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Info Panel Container */
+.info-panel-container {
+  width: 300px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--bg-panel);
+}
+
+/* Terrain Visuals */
+.tile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.3);
+  transition: filter 0.2s;
+}
+
+.tile:hover {
+  filter: brightness(1.2);
+  z-index: 5;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.tile-plain {
+  background-color: #e5e7eb;
+}
+
+.tile-wall {
+  background: repeating-linear-gradient(45deg, #374151, #374151 5px, #4b5563 5px, #4b5563 10px);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.tile-tree {
+  background-color: #15803d;
+  background-image: radial-gradient(#166534 20%, transparent 20%), radial-gradient(#166534 20%, transparent 20%);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+}
+
+.tile-pillar {
+  background: linear-gradient(to bottom, #d1d5db 0%, #9ca3af 100%);
+  border-radius: 4px;
+  transform: scale(0.9);
+}
+
+.tile-escape {
+  background: repeating-linear-gradient(-45deg, #fcd34d, #fcd34d 5px, #fbbf24 5px, #fbbf24 10px);
+}
+
+.tile-bridge {
+  background: linear-gradient(90deg, #92400e 0%, #78350f 100%);
+  border-top: 2px solid #451a03;
+  border-bottom: 2px solid #451a03;
+}
+
+.tile-river {
+  background: linear-gradient(45deg, #3b82f6, #2563eb);
+  animation: flow 2s infinite linear;
+}
+
+.tile-fort {
+  background-color: #fca5a5;
+  border: 3px solid #b91c1c;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.tile-goal {
+  background: radial-gradient(circle, #86efac 0%, #22c55e 100%);
+  box-shadow: 0 0 10px #4ade80;
+}
+
+.tile-mountain {
+  background: linear-gradient(to bottom, #d1d5db 0%, #4b5563 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.tile-village {
+  background-color: #f87171;
+  border: 2px solid #7f1d1d;
+  border-radius: 50% 50% 0 0;
+}
+
+.tile-door {
+  background: #78350f;
+  border: 2px solid #451a03;
+}
+
+.tile-chest {
+  background: radial-gradient(circle, #fbbf24 30%, #b45309 100%);
+  border: 1px solid #f59e0b;
+}
+
+.tile-start {
+  background-color: rgba(59, 130, 246, 0.2);
+  border: 1px dashed #3b82f6;
+}
+
+.tile-hidden {
+  background-color: #1f2937;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23374151' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.tile-spawn {
+  background-color: rgba(239, 68, 68, 0.2);
+  border: 1px dashed #ef4444;
+}
+
+/* Unit Tokens */
+.unit-token {
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  border: 2px solid white;
+  z-index: 10;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.unit-token:hover {
+  transform: scale(1.15);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.unit-player {
+  background: radial-gradient(circle at 30% 30%, #60a5fa, #2563eb);
+  border-color: #bfdbfe;
+}
+
+.unit-enemy {
+  background: radial-gradient(circle at 30% 30%, #f87171, #dc2626);
+  border-color: #fecaca;
+}
+
+.unit-green {
+  background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);
+  border-color: #bbf7d0;
+}
+
+.unit-boss {
+  background: radial-gradient(circle at 30% 30%, #f87171, #991b1b);
+  border: 3px solid #fcd34d;
+  /* Gold border */
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+  transform: scale(1.1);
+}
+
+.unit-selected {
+  box-shadow: 0 0 0 3px #fcd34d, 0 0 15px rgba(251, 191, 36, 0.6);
+  z-index: 30;
+}
