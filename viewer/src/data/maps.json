@@ -1,308 +1,341 @@
 [
     {
         "id": "map_01",
-        "name": "Chapter 1: The Ambush",
-        "objective": "Escape (Arrive at East)",
-        "width": 15,
+        "name": "Sector 1: The Breakout",
+        "objective": "Escape: Reach the Exit (E)",
+        "width": 10,
         "height": 10,
         "layout": [
-            "WWWWWWWWWWWWWWW",
-            "W...T........EW",
-            "W.S.T...P....EW",
-            "WS.S.........EW",
-            "W.S.T...P.....W",
-            "W.............W",
-            "WTT...WWW...TTW",
-            "W.....W.W.....W",
-            "W.....W.W.....W",
-            "WWWWWWWWWWWWWWW"
+            "WWWWWWWWWW",
+            "W...S....W",
+            "W.S......W",
+            "W...S....W",
+            "W.S......W",
+            "WW....WWWW",
+            "W........W",
+            "W...WW...W",
+            "W...WW..EW",
+            "WWWWWWWWWW"
         ],
         "legend": {
-            ".": "Plain",
+            ".": "Floor",
             "W": "Wall",
-            "T": "Tree",
-            "P": "Pillar",
-            "E": "Escape",
-            "S": "Start"
+            "S": "Start",
+            "E": "Escape"
         },
         "enemies": [
             {
-                "id": "E1",
-                "class": "Soldier",
-                "hp": 20,
-                "x": 10,
-                "y": 2
-            },
-            {
-                "id": "E2",
-                "class": "Fighter",
-                "hp": 22,
-                "x": 8,
-                "y": 3
-            },
-            {
-                "id": "E3",
-                "class": "Archer",
-                "hp": 18,
-                "x": 12,
-                "y": 2
-            },
-            {
-                "id": "E4",
-                "class": "Soldier",
-                "hp": 21,
-                "x": 8,
-                "y": 4
-            },
-            {
-                "id": "E5",
-                "class": "Fighter",
-                "hp": 23,
+                "id": "e1_1",
+                "class": "Rebel Guard",
+                "hp": 15,
                 "x": 6,
-                "y": 6
+                "y": 2,
+                "isBoss": false
             },
             {
-                "id": "E6",
-                "class": "Mercenary",
-                "hp": 19,
-                "x": 13,
-                "y": 3,
-                "isBoss": true
+                "id": "e1_2",
+                "class": "Rebel Guard",
+                "hp": 15,
+                "x": 6,
+                "y": 4,
+                "isBoss": false
+            },
+            {
+                "id": "e1_3",
+                "class": "Rebel Guard",
+                "hp": 15,
+                "x": 8,
+                "y": 6,
+                "isBoss": false
             }
         ]
     },
     {
         "id": "map_02",
-        "name": "Chapter 2: The Chokepoint",
-        "objective": "Defend Green Tiles (8 Turns)",
-        "width": 12,
-        "height": 14,
+        "name": "Sector 2: Nebula Ambush",
+        "objective": "Escape: Reach the Exit (E)",
+        "width": 15,
+        "height": 10,
         "layout": [
-            "XXXXXXXXXXXX",
-            "...RBBBBR...",
-            "...RBBBBR...",
-            "...RBBBBR...",
-            "...RBBBBR...",
-            "...RBBBBR...",
-            "...RBBBBR...",
-            "...RBBBBR...",
-            "...R....R...",
-            "..FR....RF..",
-            "...GGGGGG...",
-            "...SSSSSS...",
-            "............",
-            "WWWWWWWWWWWW"
+            "WWWWWWWWWWWWWWW",
+            "WS..T...T....EW",
+            "W.S.T.T...T..EW",
+            "WS..T...T....EW",
+            "W.S...T...T..EW",
+            "W...T...T.....W",
+            "W.T...T...T...W",
+            "W...T...T...T.W",
+            "W.T...T...T...W",
+            "WWWWWWWWWWWWWWW"
         ],
         "legend": {
-            ".": "Plain",
-            "B": "Bridge",
-            "R": "River",
-            "F": "Fort",
-            "G": "Goal",
-            "X": "Spawn",
-            "W": "Wall",
-            "S": "Start"
+            ".": "Space",
+            "W": "Asteroid",
+            "T": "Nebula",
+            "S": "Start",
+            "E": "Escape"
         },
         "enemies": [
             {
-                "id": "E1",
-                "class": "Cavalier",
-                "hp": 24,
-                "x": 4,
-                "y": 1
-            },
-            {
-                "id": "E2",
-                "class": "Cavalier",
-                "hp": 24,
-                "x": 7,
-                "y": 1
-            },
-            {
-                "id": "E3",
-                "class": "Archer",
-                "hp": 20,
+                "id": "e2_1",
+                "class": "Rebel Scout",
+                "hp": 12,
                 "x": 5,
-                "y": 0
+                "y": 2,
+                "isBoss": false
+            },
+            {
+                "id": "e2_2",
+                "class": "Rebel Scout",
+                "hp": 12,
+                "x": 8,
+                "y": 5,
+                "isBoss": false
+            },
+            {
+                "id": "e2_3",
+                "class": "Rebel Scout",
+                "hp": 12,
+                "x": 11,
+                "y": 3,
+                "isBoss": false
+            },
+            {
+                "id": "e2_4",
+                "class": "Rebel Scout",
+                "hp": 12,
+                "x": 10,
+                "y": 7,
+                "isBoss": false
+            },
+            {
+                "id": "e2_5",
+                "class": "Rebel Elite",
+                "hp": 20,
+                "x": 13,
+                "y": 4,
+                "isBoss": false
             }
         ]
     },
     {
         "id": "map_03",
-        "name": "Chapter 3: The Infiltration",
-        "objective": "Defeat Boss (Fog of War)",
+        "name": "Sector 3: Distress Beacon",
+        "objective": "Rescue Civilian (H) then Escape (E)",
         "width": 15,
-        "height": 14,
+        "height": 12,
         "layout": [
-            "TTTTTTTTTTTTTTT",
-            "TS..T.....T...T",
-            "T.S.T.?...T.?.T",
-            "TS.ST.........T",
-            "T...TTT...MMM.T",
-            "T.?.......MBM.T",
-            "T...TTT...M.M.T",
-            "T...T.T.......T",
-            "T.V.T.T.?.....T",
-            "T.............T",
-            "TTTTT...TTTTTTT",
-            "......?........",
-            "...............",
+            "WWWWWWWWWWWWWWW",
+            "WS......W.....W",
+            "W.S.....W..H..W",
+            "WS......W.....W",
+            "W.S.....W.....W",
+            "WW...WWWWWW.WWW",
+            "W.............W",
+            "W.............W",
+            "W...WWWWWWW...W",
+            "W...W.....W...W",
+            "W...W..E..W...W",
             "WWWWWWWWWWWWWWW"
         ],
         "legend": {
             ".": "Plain",
-            "T": "Forest",
-            "M": "Mountain",
-            "V": "Village",
+            "W": "Mountain",
+            "H": "House",
             "S": "Start",
-            "?": "Hidden",
-            "B": "Boss",
-            "W": "Wall"
+            "E": "Escape"
         },
         "enemies": [
             {
-                "id": "E1",
-                "class": "Myrmidon",
-                "hp": 22,
-                "x": 6,
-                "y": 2
+                "id": "e3_1",
+                "class": "Pirate",
+                "hp": 18,
+                "x": 8,
+                "y": 2,
+                "isBoss": false
             },
             {
-                "id": "E2",
-                "class": "Mage",
-                "hp": 20,
-                "x": 12,
-                "y": 2
+                "id": "e3_2",
+                "class": "Pirate",
+                "hp": 18,
+                "x": 10,
+                "y": 6,
+                "isBoss": false
             },
             {
-                "id": "E3",
-                "class": "Archer",
-                "hp": 22,
-                "x": 2,
-                "y": 5
+                "id": "e3_3",
+                "class": "Pirate",
+                "hp": 18,
+                "x": 4,
+                "y": 8,
+                "isBoss": false
             },
             {
-                "id": "Boss",
-                "class": "Assassin",
-                "hp": 30,
+                "id": "e3_4",
+                "class": "Pirate Captain",
+                "hp": 25,
                 "x": 11,
-                "y": 5,
+                "y": 2,
                 "isBoss": true
             }
         ]
     },
     {
         "id": "map_04",
-        "name": "Chapter 4: The Siege",
-        "objective": "Seize Throne",
-        "width": 18,
-        "height": 10,
+        "name": "Sector 4: The Blockade",
+        "objective": "Break Through: Reach the Exit (E)",
+        "width": 20,
+        "height": 15,
         "layout": [
-            "WWWWWWWWWWWWWWWWWW",
-            "WC..X.W.....WP.X.W",
-            "W.....D..X..D....W",
-            "WWWWWWWWDWWWWWDWWW",
-            "W................W",
-            "W.S.S.WWWWWWW.X..W",
-            "W.....WT...XW....W",
-            "W.S.S.D..B..D..X.W",
-            "W.....W.....W....W",
-            "WWWWWWWWWWWWWWWWWW"
+            "WWWWWWWWWWWWWWWWWWWW",
+            "WS.................W",
+            "W.S................W",
+            "WS.................W",
+            "W.S................W",
+            "WWWWWWWW.....WWWWWWW",
+            "W..................W",
+            "W..................W",
+            "W...WWWWWWWWWWWW...W",
+            "W...W..........W...W",
+            "W...W..........W...W",
+            "W...W....E.....W...W",
+            "W...W..........W...W",
+            "W...W..........W...W",
+            "WWWWWWWWWWWWWWWWWWWW"
         ],
         "legend": {
-            ".": "Floor",
-            "W": "Wall",
-            "D": "Door",
-            "C": "Chest",
-            "T": "Throne",
-            "P": "Prisoner",
+            ".": "Space",
+            "W": "Debris",
             "S": "Start",
-            "X": "Enemy",
-            "B": "Boss"
+            "E": "Escape"
         },
         "enemies": [
             {
-                "id": "E1",
-                "class": "Knight",
-                "hp": 32,
-                "x": 4,
-                "y": 1
+                "id": "e4_1",
+                "class": "Rebel Heavy",
+                "hp": 30,
+                "x": 10,
+                "y": 6,
+                "isBoss": false
             },
             {
-                "id": "Boss",
-                "class": "General",
-                "hp": 38,
+                "id": "e4_2",
+                "class": "Rebel Heavy",
+                "hp": 30,
+                "x": 8,
+                "y": 6,
+                "isBoss": false
+            },
+            {
+                "id": "e4_3",
+                "class": "Rebel Sniper",
+                "hp": 15,
+                "x": 5,
+                "y": 10,
+                "isBoss": false
+            },
+            {
+                "id": "e4_4",
+                "class": "Rebel Sniper",
+                "hp": 15,
+                "x": 14,
+                "y": 10,
+                "isBoss": false
+            },
+            {
+                "id": "e4_5",
+                "class": "Fleet Admiral",
+                "hp": 40,
                 "x": 9,
-                "y": 7,
+                "y": 11,
                 "isBoss": true
             }
         ]
     },
     {
         "id": "map_05",
-        "name": "Chapter 5: The Decisive Battle",
-        "objective": "Defeat Valerius",
-        "width": 15,
+        "name": "Sector 8: The Final Jump",
+        "objective": "Survive and Escape (E)",
+        "width": 20,
         "height": 15,
         "layout": [
-            "P......X......P",
-            "...............",
-            "...............",
-            "...............",
-            "...............",
-            "...............",
-            "......SBS......",
-            "X.....SSS.....X",
-            "...............",
-            "...............",
-            "...............",
-            "...............",
-            "...............",
-            "...............",
-            "P......X......P"
+            "WWWWWWWWWWWWWWWWWWWW",
+            "W..................W",
+            "W.S..............E.W",
+            "W.S..............E.W",
+            "W.S................W",
+            "W.S................W",
+            "W..................W",
+            "W..................W",
+            "W..................W",
+            "W..................W",
+            "W..................W",
+            "W..................W",
+            "W..................W",
+            "W..................W",
+            "WWWWWWWWWWWWWWWWWWWW"
         ],
         "legend": {
-            ".": "Floor",
-            "P": "Pylon",
-            "B": "Boss",
+            ".": "Space",
+            "W": "Forcefield",
             "S": "Start",
-            "X": "Guardian"
+            "E": "Escape"
         },
         "enemies": [
             {
-                "id": "TL",
-                "class": "Sage",
-                "hp": 30,
-                "x": 7,
-                "y": 0
+                "id": "e5_1",
+                "class": "Flagship Gunner",
+                "hp": 25,
+                "x": 15,
+                "y": 2,
+                "isBoss": false
             },
             {
-                "id": "TR",
-                "class": "Hero",
-                "hp": 35,
-                "x": 14,
-                "y": 0
+                "id": "e5_2",
+                "class": "Flagship Gunner",
+                "hp": 25,
+                "x": 15,
+                "y": 4,
+                "isBoss": false
             },
             {
-                "id": "BL",
-                "class": "General",
-                "hp": 40,
-                "x": 0,
-                "y": 14
-            },
-            {
-                "id": "BR",
-                "class": "Sniper",
-                "hp": 32,
-                "x": 14,
-                "y": 14
-            },
-            {
-                "id": "Boss",
-                "class": "Emperor",
-                "hp": 50,
-                "x": 7,
+                "id": "e5_3",
+                "class": "Flagship Gunner",
+                "hp": 25,
+                "x": 15,
                 "y": 6,
+                "isBoss": false
+            },
+            {
+                "id": "e5_4",
+                "class": "Flagship Gunner",
+                "hp": 25,
+                "x": 15,
+                "y": 8,
+                "isBoss": false
+            },
+            {
+                "id": "e5_5",
+                "class": "Flagship Gunner",
+                "hp": 25,
+                "x": 15,
+                "y": 10,
+                "isBoss": false
+            },
+            {
+                "id": "e5_6",
+                "class": "Flagship Gunner",
+                "hp": 25,
+                "x": 15,
+                "y": 12,
+                "isBoss": false
+            },
+            {
+                "id": "e5_boss",
+                "class": "Rebel Flagship",
+                "hp": 100,
+                "x": 18,
+                "y": 7,
                 "isBoss": true
             }
         ]

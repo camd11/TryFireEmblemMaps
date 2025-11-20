@@ -1,62 +1,82 @@
 [
   {
-    "id": "elara",
-    "name": "Elara",
-    "class": "Blade Lord",
-    "role": "Evasion Tank / Leader",
-    "description": "The exiled princess and tactician of the group.",
+    "id": "u_ace",
+    "name": "Ace",
+    "class": "Pilot",
     "stats": {
-      "hp": 18, "str": 6, "mag": 2, "skl": 9, "spd": 10, "lck": 8, "def": 4, "res": 3, "mov": 5
+      "hp": 28,
+      "str": 10,
+      "mag": 2,
+      "skl": 15,
+      "spd": 16,
+      "lck": 14,
+      "def": 8,
+      "res": 6,
+      "mov": 7
     },
-    "growths": {
-      "hp": 60, "str": 45, "mag": 20, "skl": 60, "spd": 65, "lck": 50, "def": 30, "res": 35
-    },
-    "items": ["Rapier", "Vulnerary"],
-    "skills": ["Vanguard", "Duelist"]
+    "items": [
+      "Blaster Pistol",
+      "Evasion Module"
+    ]
   },
   {
-    "id": "kaelen",
-    "name": "Kaelen",
-    "class": "General",
-    "role": "Physical Wall",
-    "description": "Elara's sworn protector. A man of few words and immense durability.",
+    "id": "u_sparky",
+    "name": "Sparky",
+    "class": "Engineer",
     "stats": {
-      "hp": 24, "str": 10, "mag": 0, "skl": 6, "spd": 3, "lck": 4, "def": 11, "res": 1, "mov": 4
+      "hp": 24,
+      "str": 4,
+      "mag": 14,
+      "skl": 12,
+      "spd": 11,
+      "lck": 8,
+      "def": 6,
+      "res": 12,
+      "mov": 5
     },
-    "growths": {
-      "hp": 85, "str": 55, "mag": 5, "skl": 40, "spd": 25, "lck": 30, "def": 60, "res": 15
-    },
-    "items": ["Steel Lance", "Javelin"],
-    "skills": ["Immovable", "Shove"]
+    "items": [
+      "Plasma Cutter",
+      "Shield Battery"
+    ]
   },
   {
-    "id": "lyra",
-    "name": "Lyra",
-    "class": "Sage",
-    "role": "Magic Nuke / Healer",
-    "description": "A prodigy from the academy who joined the guard for adventure.",
+    "id": "u_sarge",
+    "name": "Sarge",
+    "class": "Marine",
     "stats": {
-      "hp": 16, "str": 1, "mag": 8, "skl": 7, "spd": 8, "lck": 6, "def": 2, "res": 7, "mov": 5
+      "hp": 38,
+      "str": 16,
+      "mag": 0,
+      "skl": 11,
+      "spd": 9,
+      "lck": 6,
+      "def": 14,
+      "res": 4,
+      "mov": 5
     },
-    "growths": {
-      "hp": 45, "str": 10, "mag": 70, "skl": 50, "spd": 55, "lck": 45, "def": 15, "res": 50
-    },
-    "items": ["Thunder", "Heal"],
-    "skills": ["Arcane Flux", "Focus"]
+    "items": [
+      "Pulse Rifle",
+      "Frag Grenade"
+    ]
   },
   {
-    "id": "thorne",
-    "name": "Thorne",
-    "class": "Sniper",
-    "role": "Sniper",
-    "description": "A cynical veteran scout who knows the terrain better than anyone.",
+    "id": "u_doc",
+    "name": "Doc",
+    "class": "Medic",
     "stats": {
-      "hp": 20, "str": 8, "mag": 1, "skl": 11, "spd": 7, "lck": 5, "def": 5, "res": 2, "mov": 5
+      "hp": 22,
+      "str": 5,
+      "mag": 10,
+      "skl": 9,
+      "spd": 12,
+      "lck": 15,
+      "def": 5,
+      "res": 14,
+      "mov": 6
     },
-    "growths": {
-      "hp": 70, "str": 50, "mag": 15, "skl": 65, "spd": 45, "lck": 35, "def": 30, "res": 20
-    },
-    "items": ["Iron Bow", "Longbow"],
-    "skills": ["Eagle Eye", "Point-Blank"]
+    "items": [
+      "Medkit",
+      "Stim Pack"
+    ]
   }
 ]
