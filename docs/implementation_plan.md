@@ -1,161 +1,57 @@
-# Fire Emblem Campaign Design: "The Sapphire Guard"
+# Implementation Plan - FTL Scenario
 
 ## Goal Description
-Design a compelling 5-map mini-campaign for *Fire Emblem*. The campaign follows a small, elite squad of 4 units ("The Sapphire Guard") attempting to escape a coup and warn the loyalist forces. The maps will escalate in difficulty and complexity, testing the player's tactical mastery of these 4 specific units.
+Create a 5-map "FTL: Faster Than Light" themed scenario for the Fire Emblem Map Viewer. The player controls a crew of 4 specialists trying to escape a Rebel Fleet.
 
 ## User Review Required
-- **Unit Balance**: Are the 4 units sufficiently distinct and fun?
-- **Map Concepts**: Do the scenarios sound engaging and varied enough?
-- **Mechanics**: We are assuming standard FE mechanics (Weapon Triangle, etc.) unless specified otherwise.
+> [!NOTE]
+> The "Fog of War" and "Rescue" mechanics mentioned in the prompt are not explicitly supported by the current JSON schema (based on `agent_guide.md`).
+> - **Map 2 (Nebula):** I will simulate the "ambush" feeling using terrain (Nebula/Forest tiles) and enemy placement, but actual Fog of War visibility mechanics might not be present in the viewer unless they are already implemented in the React code (which I am not modifying).
+> - **Map 3 (Rescue):** Since there is no "Green Unit" or "NPC" array in the schema, I will represent the civilian as a specific tile (e.g., a "House" or "Point of Interest") that the player must visit before escaping, or simply frame it narratively.
 
 ## Proposed Changes
 
-### Campaign Narrative Arc
-*   **Theme**: Desperate survival and tactical precision.
-*   **Setting**: The Kingdom of Aethelgard. A sudden coup by the "Iron Legion" has seized the capital.
-*   **Progression**:
-    1.  **Map 1: The Escape**: Fleeing the castle courtyard.
-    2.  **Map 2: The Bridge**: Holding a chokepoint against pursuers.
-    3.  **Map 3: The Mistwood**: Navigating a fog-of-war forest with hidden enemies.
-    4.  **Map 4: The Fortress**: Infiltrating a border fort to signal allies.
-    5.  **Map 5: The Duel**: Confronting the coup leader, General Valerius.
+### Data Files
 
-### Player Unit Roster
-The "Sapphire Guard" - A specialized royal protection detail.
+#### [MODIFY] [units.json](file:///c:/Users/camd1/OneDrive/Documents/TryFireEmblemMaps/viewer/src/data/units.json)
+Overwrite with 4 new units:
+1.  **Ace (Pilot)** - High Mov, Balanced stats. Class: "Pilot". Items: "Blaster" (Sword equivalent).
+2.  **Sparky (Engineer)** - High Mag/Res. Class: "Engineer". Items: "Plasma Cutter" (Magic equivalent).
+3.  **Sarge (Marine)** - High HP/Str/Def. Class: "Marine". Items: "Pulse Rifle" (Axe equivalent).
+4.  **Doc (Medic)** - High Lck/Res. Class: "Medic". Items: "Medkit" (Staff equivalent).
 
-#### 1. Elara (The Lord/Tactician)
-*   **Class**: Fencer (Sword) -> Blade Lord
-*   **Role**: Evasion Tank / Crit Dealer / Leader
-*   **Personality**: Determined, sharp, protective.
-*   **Stats**: High Speed/Skill, Mid Str, Low Def/Res.
-*   **Personal Ability**: *Vanguard* - +10 Hit/Avo to allies within 2 spaces.
-*   **Weapon**: *Rapier* (Effective vs Armor/Cav).
+#### [MODIFY] [maps.json](file:///c:/Users/camd1/OneDrive/Documents/TryFireEmblemMaps/viewer/src/data/maps.json)
+Overwrite with 5 new maps. All have Objective: "Escape" (Arrive at 'E' tiles).
 
-#### 2. Kaelen (The Wall)
-*   **Class**: Armored Knight (Lance) -> General
-*   **Role**: Physical Wall / Chokepoint Holder
-*   **Personality**: Stoic, loyal, gentle giant.
-*   **Stats**: High HP/Def/Str, Low Spd/Mov.
-*   **Personal Ability**: *Immovable* - Takes -3 damage when waiting (ending turn without attacking).
-*   **Weapon**: *Steel Lance*, *Javelin*.
-
-#### 3. Lyra (The Glass Cannon/Utility)
-*   **Class**: Mage (Anima) -> Sage
-*   **Role**: Magical Nuke / Secondary Healer
-*   **Personality**: Curious, energetic, slightly reckless.
-*   **Stats**: High Mag/Res/Spd, Very Low HP/Def.
-*   **Personal Ability**: *Arcane Flux* - After attacking, adjacent enemies suffer -2 Res for 1 turn.
-*   **Weapon**: *Thunder* (High Crit), *Heal* Staff.
-
-#### 4. Thorne (The Ranger/Sniper)
-*   **Class**: Archer (Bow) -> Sniper
-*   **Role**: Chip Damage / Anti-Air / Finisher
-# Fire Emblem Campaign Design: "The Sapphire Guard"
-
-## Goal Description
-Design a compelling 5-map mini-campaign for *Fire Emblem*. The campaign follows a small, elite squad of 4 units ("The Sapphire Guard") attempting to escape a coup and warn the loyalist forces. The maps will escalate in difficulty and complexity, testing the player's tactical mastery of these 4 specific units.
-
-## User Review Required
-- **Unit Balance**: Are the 4 units sufficiently distinct and fun?
-- **Map Concepts**: Do the scenarios sound engaging and varied enough?
-- **Mechanics**: We are assuming standard FE mechanics (Weapon Triangle, etc.) unless specified otherwise.
-
-## Proposed Changes
-
-### Campaign Narrative Arc
-*   **Theme**: Desperate survival and tactical precision.
-*   **Setting**: The Kingdom of Aethelgard. A sudden coup by the "Iron Legion" has seized the capital.
-*   **Progression**:
-    1.  **Map 1: The Escape**: Fleeing the castle courtyard.
-    2.  **Map 2: The Bridge**: Holding a chokepoint against pursuers.
-    3.  **Map 3: The Mistwood**: Navigating a fog-of-war forest with hidden enemies.
-    4.  **Map 4: The Fortress**: Infiltrating a border fort to signal allies.
-    5.  **Map 5: The Duel**: Confronting the coup leader, General Valerius.
-
-### Player Unit Roster
-The "Sapphire Guard" - A specialized royal protection detail.
-
-#### 1. Elara (The Lord/Tactician)
-*   **Class**: Fencer (Sword) -> Blade Lord
-*   **Role**: Evasion Tank / Crit Dealer / Leader
-*   **Personality**: Determined, sharp, protective.
-*   **Stats**: High Speed/Skill, Mid Str, Low Def/Res.
-*   **Personal Ability**: *Vanguard* - +10 Hit/Avo to allies within 2 spaces.
-*   **Weapon**: *Rapier* (Effective vs Armor/Cav).
-
-#### 2. Kaelen (The Wall)
-*   **Class**: Armored Knight (Lance) -> General
-*   **Role**: Physical Wall / Chokepoint Holder
-*   **Personality**: Stoic, loyal, gentle giant.
-*   **Stats**: High HP/Def/Str, Low Spd/Mov.
-*   **Personal Ability**: *Immovable* - Takes -3 damage when waiting (ending turn without attacking).
-*   **Weapon**: *Steel Lance*, *Javelin*.
-
-#### 3. Lyra (The Glass Cannon/Utility)
-*   **Class**: Mage (Anima) -> Sage
-*   **Role**: Magical Nuke / Secondary Healer
-*   **Personality**: Curious, energetic, slightly reckless.
-*   **Stats**: High Mag/Res/Spd, Very Low HP/Def.
-*   **Personal Ability**: *Arcane Flux* - After attacking, adjacent enemies suffer -2 Res for 1 turn.
-*   **Weapon**: *Thunder* (High Crit), *Heal* Staff.
-
-#### 4. Thorne (The Ranger/Sniper)
-*   **Class**: Archer (Bow) -> Sniper
-*   **Role**: Chip Damage / Anti-Air / Finisher
-*   **Personality**: Cynical, pragmatic, observant.
-*   **Stats**: High Skl/Str, Mid Spd/Def.
-*   **Personal Ability**: *Eagle Eye* - +15 Hit when attacking from max range.
-*   **Weapon**: *Iron Bow*, *Longbow*.
+*   **Map 1: Breakout**
+    *   Small 10x10 map.
+    *   Corridor layout.
+    *   Weak enemies ("Rebel Guards").
+*   **Map 2: Nebula**
+    *   Medium 15x10 map.
+    *   Lots of "Tree" tiles (repurposed as Nebula clouds) for avoidance bonuses.
+    *   Enemies hidden in "clouds".
+*   **Map 3: Distress Signal**
+    *   Medium 15x12 map.
+    *   Side objective area (optional path).
+*   **Map 4: The Blockade**
+    *   Large 20x15 map (or max supported size).
+    *   Narrow chokepoint defended by a "Boss" unit ("Rebel Captain").
+*   **Map 5: The Final Jump**
+    *   Survival/Escape map.
+    *   Player starts surrounded or in a corner.
+    *   Objective: Reach the "Jump Beacon" (Escape tile) at the far end.
 
 ## Verification Plan
-### Manual Verification - Asking the user to deploy to staging and testing, verifying UI changes on an iOS app etc.
 
-# Phase 2: Web Viewer Implementation
+### Automated Tests
+*   None available for data files.
 
-## Goal
-Create a web-based viewer to visualize the 5 Fire Emblem maps and unit roster.
-**Constraints**: Simple graphics, NOT a full game engine. Focus on visualization.
-
-## Tech Stack
-*   **Framework**: React (Vite)
-*   **Styling**: Vanilla CSS (Premium, dark mode aesthetic)
-*   **Data**: JSON objects derived from the markdown designs.
-
-## Components
-1.  **App**: Main container, handles map selection state.
-2.  **MapViewer**: Renders the grid.
-    *   **GridTile**: Individual cell. Renders terrain color/icon and unit if present.
-    *   **UnitToken**: Simple visual representation of a unit (Player vs Enemy).
-3.  **InfoPanel**: Displays stats of the selected/hovered unit or terrain.
-
-## Data Structure
-*   `maps.json`: Array of map objects (layout grid, dimensions, enemies).
-*   `units.json`: Player unit definitions.
-
-## Visual Style
-*   **Terrain**: Color-coded tiles (Green=Forest, Grey=Wall, Blue=River).
-*   **Units**:
-    *   **Player**: Blue tokens with class icons/initials.
-    *   **Enemy**: Red tokens.
-    *   **Green Units**: Green tokens.
-*   **UI**: Glassmorphism, sleek dark background, crisp typography.
-
-# Phase 3: Visual Overhaul
-
-## Goal
-Upgrade the "simple graphics" to be "better and clearer" as requested.
-
-## Visual Improvements
-1.  **Terrain**:
-    *   Use CSS gradients to simulate depth/texture (e.g., wood grain for trees, stone pattern for walls).
-    *   Add borders/shadows to distinguish distinct tiles.
-2.  **Units**:
-    *   Improve readability of text.
-    *   Add distinct borders for Bosses vs Elites.
-    *   Add a "selected" glow effect.
-3.  **UX**:
-    *   Add tooltips for terrain types on hover.
-    *   Ensure the grid is centered and responsive.
-
-- Review the unit synergy: Do they cover each other's weaknesses? (Tank protects Mage, Sniper handles flyers for Tank, Lord handles bosses).
-- Review map progression: Does the complexity curve make sense?
+### Manual Verification
+1.  **Load the Viewer**: Open the web viewer (I will assume it's running or I can start it if needed, but usually I just verify the files).
+2.  **Check Units**: Verify all 4 units appear with correct names and stats.
+3.  **Play Map 1**: Move units, check if "Escape" tiles work (if implemented in engine) or just visually verify layout.
+4.  **Cycle Maps**: Use the viewer's map selector to load Maps 1-5.
+    *   Verify layouts match the "FTL" theme (corridors, space, etc.).
+    *   Verify enemy placement.
+    *   **Critical Check**: Ensure `width` and `height` match the `layout` array dimensions to prevent crashes.

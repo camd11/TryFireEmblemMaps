@@ -1,58 +1,35 @@
-# Fire Emblem: The Sapphire Guard - Design Document
+# Walkthrough - FTL Scenario Verification
 
-## Campaign Overview
-**The Sapphire Guard** is a 5-map mini-campaign focusing on a squad of 4 elite units escaping a coup and striking back at the usurper. The campaign is designed to test tactical flexibility, with each map introducing new layers of complexity.
+I have implemented and verified the "FTL: Faster Than Light" scenario.
 
-## The Roster
-1.  **Elara (Blade Lord)**: The Leader. High Avoid, Rapier user. Critical for taking down armored/cavalry bosses.
-2.  **Kaelen (General)**: The Wall. Physical tank who can hold chokepoints indefinitely but struggles against magic and terrain.
-3.  **Lyra (Sage)**: The Nuke. High magic damage and healing, but extremely fragile. The answer to high-defense enemies.
-4.  **Thorne (Sniper)**: The Specialist. Long-range chip damage and vision utility. Essential for taking out high-threat targets safely.
+## Changes Implemented
 
-## Map Breakdown
+### Units (`units.json`)
+Created 4 specialist units:
+- **Ace** (Pilot)
+- **Sparky** (Engineer)
+- **Sarge** (Marine)
+- **Doc** (Medic)
 
-### Map 1: The Ambush
-*   **Type**: Escape / Tutorial
-*   **Challenge**: Survive the initial onslaught and cross the bridge before reinforcements overwhelm you.
-*   **Key Moment**: Kaelen holding the line while Thorne snipes the archer guarding the exit.
+### Maps (`maps.json`)
+Created 5 maps with "Escape" objectives:
+1.  **Sector 1: The Breakout** (Corridor escape)
+2.  **Sector 2: Nebula Ambush** (Forest/Nebula terrain)
+3.  **Sector 3: Distress Beacon** (Rescue objective)
+4.  **Sector 4: The Blockade** (Chokepoint)
+5.  **Sector 5: The Final Jump** (Survival/Boss)
 
-### Map 2: The Chokepoint
-*   **Type**: Defense
-*   **Challenge**: Hold a wide bridge against waves of Cavaliers and Knights for 8 turns.
-*   **Key Moment**: Elara using her Rapier to one-shot a rushing Knight that threatens to break the line.
+## Verification Results
 
-### Map 3: The Infiltration
-*   **Type**: Fog of War / Seize
-*   **Challenge**: Navigate a forest filled with hidden enemies and traps.
-*   **Key Moment**: Using Thorne's superior vision to spot a hidden Myrmidon with a Killing Edge before he can ambush Elara.
+### Automated Checks
+- **JSON Validity**: Files are valid JSON.
+- **Dimensions**: Manually ensured `width`/`height` match `layout` arrays.
 
-### Map 4: The Siege
-*   **Type**: Multi-Objective / Indoor
-*   **Challenge**: Seize the throne while simultaneously rushing a side room to save prisoners from execution.
-*   **Key Moment**: Splitting the party. Thorne sniping the executioner through a wall just in time.
+### Manual Verification
+- **Browser Test**: Navigated to `http://localhost:5175`.
+- **Unit Check**: Verified all 4 units appear in the roster.
+- **Map Cycle**: Successfully loaded all 5 maps.
 
-### Map 5: The Decisive Battle
-*   **Type**: Boss Gimmick
-*   **Challenge**: Defeat the invincible General Valerius by destroying 4 Pylons in the corners of the map.
-*   **Key Moment**: Each unit facing a 1v1 duel against a counter-unit in their respective corner while kiting the boss.
-
-## Conclusion
-This campaign offers a tight, escalating difficulty curve that forces the player to master the specific strengths and weaknesses of their small team. No unit is filler; everyone is essential to victory.
-
-## Verification
-The web viewer has been successfully implemented and verified.
-
-### Visual Overhaul Gallery
-````carousel
-![Map 1: Ambush](assets/initial_map_view_1763666001925.png)
-<!-- slide -->
-![Map 2: Chokepoint](assets/map2_fixed_view_1763667542013.png)
-<!-- slide -->
-![Map 3: Infiltration](assets/map3_fixed_view_1763668409738.png)
-<!-- slide -->
-![Map 4: Siege](assets/map4_load_attempt_1763668715227.png)
-<!-- slide -->
-![Map 5: Decisive Battle](assets/map5_view_1763666046816.png)
-<!-- slide -->
-![Unit Selection](assets/unit_selected_view_1763666004876.png)
-````
+### Evidence
+Map 5 "The Final Jump" loaded successfully:
+![Map 5 Screenshot](file:///C:/Users/camd1/.gemini/antigravity/brain/a090a812-99b0-497a-8e7e-6124492f1661/map_5_final_jump_1763671911717.png)
